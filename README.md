@@ -1,6 +1,4 @@
 # Moto-Maintenance-Manager
-Semestrální práce
-Moto Maintenance Manager 🏍️
 Konzolová aplikace v C++ pro správu udržby motocyklů. V aplikaci se může evidovat více strojů, sledovat jejich nájezd a automaticky upozorňuje na blížíce se nebo 
 končíci termín na servis.
 Data se ukládají v lokální databázi SQLite takže se nesmažou po vypnutí.
