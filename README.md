@@ -1,5 +1,5 @@
 Moto-Maintenance-Manager
-O projektu
+
 Aplikace slouží jako digitální servisní knížka. Umožňuje evidovat více motocyklů najednou a pro každý z nich automaticky generuje základní servisní plán (olej, brzdová kapalina, řetězovka, pneu).
 
 Stačí pouze aktualizovat stav tachometru a program sám barevně zvýrazní, co je potřeba udělat, nebo kolik kilometrů zbývá do další výměny.
