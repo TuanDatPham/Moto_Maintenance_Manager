@@ -1,35 +1,43 @@
-# Moto-Maintenance-Manager
-Semestrální práce
-Moto Maintenance Manager 🏍️
-Konzolová aplikace v C++ pro správu udržby motocyklů. V aplikaci se může evidovat více strojů, sledovat jejich nájezd a automaticky upozorňuje na blížíce se nebo 
-končíci termín na servis.
-Data se ukládají v lokální databázi SQLite takže se nesmažou po vypnutí.
-________________________________________________________________________________________________
-🚀 Hlavní funkce
-Evidence motocyklů: Přidávání libovolného počtu motorek (Značka, Model, Nájezd).
+Moto Maintenance Manager
+Jednoduchá desktopová aplikace pro správu motocyklů.
 
-Servisní plán: Automatické generování servisních prvků pro motorku (Olej, Brzdová kapalina, Řetězová sada, Pneu, atd.).
+O projektu
+Aplikace slouží jako digitální servisní knížka. Umožňuje evidovat více motocyklů najednou a pro každý z nich automaticky generuje základní servisní plán (olej, brzdová kapalina, řetězovka, pneu).
 
-Chytrá upozornění:
+Stačí pouze aktualizovat stav tachometru a program sám barevně zvýrazní, co je potřeba udělat, nebo kolik kilometrů zbývá do další výměny.
 
-[!] Nutný servis (zbývá méně než 500 km).
+Hlavní funkce
+Evidenc motocyklů: Přidávání nových strojů (Značka, Model, Nájezd) a jejich mazání.
 
-[!!!] Přetažený servis (zobrazí o kolik km).
+Automatický servisní plán: Po přidání motorky se automaticky vytvoří sledované úkony s přednastavenými intervaly.
 
-OK V pořádku.
+Aktualizace tachometru: Možnost zadat nový stav tachometru nebo jen přičíst ujeté kilometry (např. +200 km po vyjížďce).
 
-Databáze: Veškerá data se ukládají do souboru motorky.db.
-________________________________________________________________________________________________
-📂 Struktura souborů
-main.cpp - Hlavní zdrojový kód aplikace.
+Hromadný servis: Možnost označit více úkonů najednou a potvrdit jejich provedení. Interval se automaticky resetuje podle aktuálního nájezdu.
 
-sqlite3.c - Zdrojový kód SQLite (Amalgamation).
+Tisk servisní knížky: Export aktuálního stavu a historie do textového souboru ve složce "Servisni_knizky".
 
-sqlite3.h - Hlavičkový soubor SQLite.
+Jak aplikaci spustit
+1. Ujistěte se, že máte ve složce všechny tři soubory:
 
-motorky.db - Databázový soubor (vytvoří se automaticky po prvním spuštění).
+main.py
 
-README.md - Dokumentace projektu.
-________________________________________________________________________________________________
-🗄️ Správa databáze
-Soubor motorky.db je binární SQL databáze. Pro ruční prohlížení nebo úpravu dat doporučujeme použít program SQLite viewer přímo ve VS.
+gui.py
+
+database.py
+
+2. Spusťte soubor main.py.
+
+Aplikace si při prvním spuštění sama vytvoří databázový soubor motorky.db.
+
+Struktura projektu
+main.py – Hlavní spouštěcí soubor aplikace.
+
+gui.py – Obsahuje veškerou grafiku, okna, tlačítka a logiku uživatelského rozhraní.
+
+database.py – Stará se o komunikaci s databází (SQLite), ukládání a načítání dat.
+
+Servisni_knizky/ – Složka, která se vytvoří automaticky při prvním exportu servisní knížky.
+
+Poznámka
+Data jsou ukládána lokálně do souboru motorky.db. Pokud tento soubor smažete, přijdete o všechna uložená data.
