@@ -1,6 +1,4 @@
-Moto Maintenance Manager
-Jednoduchá desktopová aplikace pro správu motocyklů.
-
+Moto-Maintenance-Manager
 O projektu
 Aplikace slouží jako digitální servisní knížka. Umožňuje evidovat více motocyklů najednou a pro každý z nich automaticky generuje základní servisní plán (olej, brzdová kapalina, řetězovka, pneu).
 
